@@ -1,0 +1,8 @@
+"STARTUP.obj",
+"main.obj",
+"Key.obj",
+"Led.obj",
+"MCUInit.obj",
+"isr.obj" 
+TO "RS485" 
+RAMSIZE(256) 

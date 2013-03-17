@@ -1,0 +1,41 @@
+C51 COMPILER V9.02   MCUINIT                                                               03/12/2013 15:49:54 PAGE 1   
+
+
+C51 COMPILER V9.02, COMPILATION OF MODULE MCUINIT
+OBJECT MODULE PLACED IN MCUInit.OBJ
+COMPILER INVOKED BY: D:\Program Files\Keil\C51\BIN\C51.EXE MCUInit.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include <MCUInit.h>
+   2          
+   3          void MCUInit(void)
+   4          {
+   5   1              TMOD=0x21;
+   6   1              //TH0=(65536-50000)/256;
+   7   1              //TL0=(65536-50000)%256;
+   8   1              TH1=0xfd;
+   9   1              TL1=0xfd;
+  10   1              //TR0=1;
+  11   1              TR1=1;
+  12   1              //ET0=1;
+  13   1              SM0=0;
+  14   1              SM1=1;
+  15   1              REN=1;
+  16   1              EA=1;
+  17   1              ES=1;
+  18   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     22    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
