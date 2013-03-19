@@ -7,3 +7,10 @@ E:\practice\mcu485\RS485.uvproj
 Project File Date:  03/12/2013
 
 <h2>Output:</h2>
+compiling isr.c...
+isr.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+linking...
+Program Size: data=64.0 xdata=0 code=1199
+creating hex file from "RS485"...
+"RS485" - 0 Error(s), 0 Warning(s).
