@@ -5,6 +5,8 @@ extern int Count;
 long int HM=0x0105;
 long int ADD=0x5253AB;
 long int SUB=0x4C57A9;
+long int READ=0x5654B0;
+char voltage[]={0x01, 0x05, 0x01, 0x90, 0x00};
 
 void ser() interrupt 4
 {
@@ -29,6 +31,17 @@ void ser() interrupt 4
 	else if(a==HM&&b==SUB)
 	{
 		Count--;
+	}
+	else if(a==HM&&b==READ)
+	{
+		voltage[2]=(Count>>8);
+		voltage[3]=(Count&0xff);
+		for(i=0;i<5;i++)
+		{
+			SBUF=voltage[i];
+			while(!TI);
+			TI=0;
+		}
 	}
 	else{}
 	a=0;
